@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>spsc.gov</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    
+    .navbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 30px;
+      background-color: white;
+      border-bottom: 1px solid #ddd;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .logo img {
+      width: 70px;
+      height: auto;
+    }
+
+    .logo-text h1 {
+      margin: 0;
+      font-size: 20px;
+      color: #004d26;
+    }
+
+    .logo-text p {
+      margin: 0;
+      font-size: 14px;
+      color: #004d26;
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 30px;
+      margin: 0;
+      padding: 0;
+      
+    }
+
+    .nav-links li a {
+      text-decoration: none;
+      color: #1a1a1a;
+      font-weight: 500;
+      font-size: 16px;
+      transition: color 0.3s;
+    }
+
+    .nav-links li a:hover {
+      color: #007b5e;
+    }
+
+   
+    .class1 {
+      position: relative;
+      width: 289px;
+      height: 300px;
+      background-color: rgb(42, 41, 39);
+      transition: width 1s, height 1s;
+      transition-timing-function: cubic-bezier(.33,.54,.77,.7);
+      overflow-y: auto;
+      justify-content: end;
+      
+      
+    }
+
+    .class1:hover {
+      width: 320px;
+      height: 350px;
+    }
+
+    .class1p {
+      text-align: center;
+      padding: 10px;
+      color: white;
+      padding-top: 80px;
+    }
+
+    .class2 {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 30px;
+      flex-wrap: wrap;
+    }
+
+    
+    footer {
+      background-color: white;
+      padding: 40px 20px;
+      margin-top: 40px;
+    }
+
+    .footer-container {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      gap: 30px;
+    }
+
+    .footer-links, .footer-contact, .footer-info {
+      max-width: 300px;
+    }
+
+    .footer-links h3,
+    .footer-contact h3 {
+      margin-bottom: 10px;
+    }
+
+    .footer-links ul,
+    .footer-contact ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .footer-links ul li,
+    .footer-contact ul li {
+      margin-bottom: 5px;
+      transition: color 0.3s
+    }
+    .footer-contact ul li:hover{ color: #007b5e;}
+
+    .footer-links ul li a {
+      text-decoration: none;
+      color: #333;
+      transition: color 0.3s;
+    }
+    .footer-links ul li a:hover{
+      color: #007b5e;
+    
+    }
+
+    .footer-logo {
+      width: 60px;
+      margin-bottom: 10px;
+    }
+
+    .footer-bottom {
+      text-align: center;
+      margin-top: 30px;
+      border-top: 1px solid #ccc;
+      padding-top: 10px;
+    }
+
+    .footer-bottom a {
+      text-decoration: none;
+      color: #007b5e;
+    }
+    .footer-info p strong{
+      transition: color 0.3s
+    }
+    .footer-info p strong:hover{
+      color:#007b5e ;
+    }
+    .one-row{
+  display: flex;
+  gap: 18px;
+  align-items: flex-start;  
+  flex-wrap: wrap; 
+  padding: 20px 30px;
+}
+.transition img {
+  width: 300px;
+  height: auto;
+  border-radius: 5px;
+  /* padding: 2%; */
+  /* padding-right: 50%; */
+  
+}
+.transition {
+  background-color: green;
+  width: 300px;
+  height: 350px;
+  animation: hello;
+  padding: 16px;
+  animation-duration: 7s;
+  animation-timing-function: cubic-bezier(.17,.67,.83,.67);
+  animation-delay: 0s;
+  animation-iteration-count: infinite;
+
+}
+
+@keyframes hello {
+  from{
+    background-color:#007b5e ;
+  }
+  to{
+    background-color:green ;
+  }
+
+}
+.logo1{
+  position: absolute; 
+    top: 12%;
+    /* right: 67%; */
+    /* margin-top: -35px; */
+    /* width: 90px; */
+    /* height: 70px; */
+    /* line-height: 70px; */
+    font-size: 38px;
+    /* z-index: 3; */
+    color: whitesmoke;
+    /*   */
+    left: 20px;
+}
+.logo2{
+  color: whitesmoke;
+  position: absolute;
+  top: 12% ;
+  font-size: 38px;
+  /* right: 44%; */
+  left: 18%; transform: translateX(-50%);
+}
+.logo3{
+  color: whitesmoke;
+  position: absolute;
+  font-size: 38px;
+  top: 12%;
+  /* right: 21% ; */
+  /* z-index: 4; */
+  right: 220px;
+  
+}
+.botton{
+  border: none;
+    border-radius: 5px;
+    background-color: #c9f31d;
+    font-size: 27px; 
+    color: whitesmoke;
+    display: block;
+    width: 10%;
+    padding-left: 1%;
+    
+    
+  
+}
+
+
+
+
+  </style>
+</head>
+
+    <body>
+      <!-- <script src="F:\TALAL\footer musa\script.js"></script> -->
+
+  <nav class="navbar">
+    <div class="logo">
+      <img src="footer-Picsart-BackgroundRemover.png" alt="SPSC Logo">
+      <div class="logo-text">
+        <h1>Sindh Public</h1>
+        <p>Service Commission</p>
+      </div>
+    </div>
+    <ul class="nav-links">
+      <li><a href="page2.html" target="_blank">Home</a></li>
+      <li><a href="#">Overview ▼</a></li>
+      <li><a href="#">Legal Framework ▼</a></li>
+      <li><a href="#">Eligibility ▼</a></li>
+      <li><a href="#">Results ▼</a></li>
+      <li><a href="#">Downloads ▼</a></li>
+      <li><a href="#">Gallery</a></li>
+      <li><a href="#">Contact Us</a></li>
+      <li class="botton"><a href="registion.html" target="_blank">Apply Online</a></li>
+    </ul>
+  </nav>
+  <div class="one-row">
+<div class="transition">
+<img src="featured-image-01.jpg" alt="">
+
+</div>
+  
+  <div class="class2">
+    <div class="class1">
+      <div class="logo1">
+         <i class="fa-solid fa-bullhorn"></i>
+      </div>
+      <p class="class1p">Box 1 content: Our hallmark is “Excellence driven by Passion!“ Our paramount aim is to rejuvenate the perception and image of SPSC...</p>
+    </div>
+    <div class="class1">
+      <div class="logo2">
+        <i class="fa-regular fa-pen-to-square"></i>
+      </div>
+      <p class="class1p">Box 2 content: Our hallmark is “Excellence driven by Passion!“ Our paramount aim is to rejuvenate the perception and image of SPSC...</p>
+    </div>
+    <div class="class1">
+      <div class="logo3"> 
+        <i class="icon far fa-calendar-alt"></i> 
+      </div>
+      <p class="class1p">Box 3 content: Our hallmark is “Excellence driven by Passion!“ Our paramount aim is to rejuvenate the perception and image of SPSC...</p>
+    </div>
+  </div>
+  </div>
+
+ 
+  <footer>
+    <div class="footer-container">
+      <div class="footer-links">
+        <h3>Other Links</h3>
+        <ul>
+          <li><a href="#">Government of Sindh</a></li>
+          <li><a href="#">Federal Public Service Commission</a></li>
+          <li><a href="#">Punjab Public Service Commission</a></li>
+          <li><a href="#">Balochistan Public Service Commission</a></li>
+          <li><a href="#">Khyber Pakhtunkhwa Public Service Commission</a></li>
+          <li><a href="#">Azad Jammu Kashmir Public Service Commission</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-contact">
+        <h3>Contact</h3>
+        <ul>
+          <li>Office</li>
+          <li>Email</li>
+          <li>Post</li>
+        </ul>
+      </div>
+
+      <div class="footer-info">
+        <img src="footer-Picsart-BackgroundRemover.png" alt="" class="footer-logo">
+        <p><strong>Head Office, Hyderabad</strong><br>Thandi Sarak, Hyderabad, Sindh</p>
+        <p><strong>Regional Office Karachi</strong><br>2nd Floor, Sindh Secretariat Building No. 6, Karachi</p>
+        <p><strong>Regional Office Sukkur</strong><br>Bangalow No. B-156, Friends Cooperative Housing Society (Akhwat Nagar), Sukkur</p>
+        <p><strong>Regional Office Larkano</strong><br>Commissioner Office Building, Larkano</p>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2025 Sindh Public Service Commission | <a href="#">Privacy Policy</a></p>
+    </div>
+  </footer>
+</body>
+</html>
