@@ -1,0 +1,92 @@
+[
+  {
+    "id": "JOB-001",
+    "title": "Assistant Director (IT)",
+    "department": "Information Technology",
+    "category": "BPS-17",
+    "vacancies": 15,
+    "lastDate": "2025-06-30",
+    "status": "open",
+    "description": "The Assistant Director (IT) will be responsible for overseeing the IT infrastructure, managing software development projects, and ensuring cybersecurity compliance across the department.",
+    "requirements": [
+      "Bachelors/Masters in Computer Science or IT",
+      "Minimum 5 years of relevant experience",
+      "Age: 25-35 years"
+    ],
+    "salary": "PKR 60,000 - 120,000",
+    "location": "Hyderabad",
+    "postedDate": "2025-01-15"
+  },
+  {
+    "id": "JOB-002",
+    "title": "Section Officer (Admin)",
+    "department": "Administration",
+    "category": "BPS-18",
+    "vacancies": 10,
+    "lastDate": "2025-07-15",
+    "status": "open",
+    "description": "The Section Officer will handle administrative affairs, coordination between departments, and implementation of policies.",
+    "requirements": [
+      "Masters in Public Administration or equivalent",
+      "Minimum 3 years administrative experience",
+      "Age: 25-35 years"
+    ],
+    "salary": "PKR 70,000 - 150,000",
+    "location": "Hyderabad",
+    "postedDate": "2025-02-01"
+  },
+  {
+    "id": "JOB-003",
+    "title": "Junior Clerk",
+    "department": "General Administration",
+    "category": "BPS-11",
+    "vacancies": 50,
+    "lastDate": "2025-08-20",
+    "status": "open",
+    "description": "Junior Clerk positions for handling clerical work, data entry, and office management tasks.",
+    "requirements": [
+      "Intermediate (F.A/F.Sc) or equivalent",
+      "Typing speed of 30 WPM",
+      "Age: 18-28 years"
+    ],
+    "salary": "PKR 25,000 - 45,000",
+    "location": "Multiple Cities",
+    "postedDate": "2025-03-01"
+  },
+  {
+    "id": "JOB-004",
+    "title": "Research Officer",
+    "department": "Planning & Development",
+    "category": "BPS-17",
+    "vacancies": 8,
+    "lastDate": "2025-07-30",
+    "status": "open",
+    "description": "Conduct policy research, data analysis, and prepare reports for development projects.",
+    "requirements": [
+      "Masters in Economics/Statistics/Planning",
+      "Research experience preferred",
+      "Age: 25-35 years"
+    ],
+    "salary": "PKR 55,000 - 110,000",
+    "location": "Hyderabad",
+    "postedDate": "2025-02-15"
+  },
+  {
+    "id": "JOB-005",
+    "title": "Accountant",
+    "department": "Finance",
+    "category": "BPS-16",
+    "vacancies": 12,
+    "lastDate": "2025-08-10",
+    "status": "open",
+    "description": "Handle financial records, audit reports, and budget management for the commission.",
+    "requirements": [
+      "B.Com / MBA Finance",
+      "Knowledge of accounting software",
+      "Age: 22-30 years"
+    ],
+    "salary": "PKR 45,000 - 90,000",
+    "location": "Hyderabad / Karachi",
+    "postedDate": "2025-03-10"
+  }
+]

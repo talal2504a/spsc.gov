@@ -1,0 +1,20 @@
+{
+  "name": "spsc-gov",
+  "version": "1.0.0",
+  "description": "Sindh Public Service Commission - Official Website",
+  "main": "server/index.js",
+  "scripts": {
+    "start": "node server/index.js",
+    "dev": "node server/index.js"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "groq-sdk": "^1.1.2",
+    "jsonwebtoken": "^9.0.2",
+    "multer": "^1.4.5-lts.1",
+    "openai": "^6.37.0",
+    "uuid": "^9.0.0"
+  }
+}

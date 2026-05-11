@@ -1,0 +1,11 @@
+[
+  {
+    "id": "USR-001",
+    "name": "Admin SPSC",
+    "cnic": "4130112345671",
+    "email": "admin@spsc.gov.pk",
+    "password": "$2a$10$dummyhash",
+    "role": "admin",
+    "createdAt": "2024-01-01T00:00:00.000Z"
+  }
+]

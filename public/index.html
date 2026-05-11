@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SPSC - Sindh Public Service Commission</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="icon" href="/logo-dark.png" type="image/png">
+</head>
+<body>
+    <!-- ===== LOADING ===== -->
+    <div id="loadingScreen" class="loading-screen">
+        <div class="loader"></div>
+        <p>Loading SPSC Portal...</p>
+    </div>
+
+    <!-- ===== NAVBAR ===== -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <img src="/logo-dark.png" alt="SPSC Logo">
+                <div class="logo-text">
+                    <h1>Sindh Public</h1>
+                    <p>Service Commission</p>
+                </div>
+            </div>
+            <div class="hamburger" id="hamburger">
+                <span></span><span></span><span></span>
+            </div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home" class="active">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#jobs">Jobs</a></li>
+                <li><a href="#results">Results</a></li>
+                <li><a href="#apply" id="navApply">Apply Online</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#" id="navLogin" class="btn-login"><i class="fas fa-user"></i> Login</a></li>
+                <li><a href="#" id="navDashboard" class="btn-dashboard" style="display:none;"><i class="fas fa-tachometer-alt"></i> Dashboard</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- ===== HERO SECTION ===== -->
+    <section class="hero" id="home">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <img src="/logo-dark.png" alt="SPSC" class="hero-logo">
+            <h1>Sindh Public Service Commission</h1>
+            <p>Excellence driven by Passion — Serving the Nation through Merit, Transparency & Fairness</p>
+            <div class="hero-buttons">
+                <a href="#jobs" class="btn-primary"><i class="fas fa-briefcase"></i> View Open Positions</a>
+                <a href="#apply" class="btn-secondary"><i class="fas fa-file-alt"></i> Apply Online</a>
+            </div>
+            <div class="hero-stats">
+                <div class="stat-item"><span class="stat-number" id="statJobs">5+</span><span class="stat-label">Active Jobs</span></div>
+                <div class="stat-item"><span class="stat-number" id="statApplicants">1,000+</span><span class="stat-label">Applicants</span></div>
+                <div class="stat-item"><span class="stat-number" id="statDepts">10+</span><span class="stat-label">Departments</span></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== NOTIFICATION BAR ===== -->
+    <div class="notification-bar" id="notificationBar">
+        <div class="container">
+            <i class="fas fa-bullhorn"></i>
+            <span id="notificationText">New vacancies announced for Assistant Director (IT) and Junior Clerk positions. Apply now!</span>
+            <button id="closeNotify"><i class="fas fa-times"></i></button>
+        </div>
+    </div>
+
+    <!-- ===== ABOUT SECTION ===== -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="section-header">
+                <h2>About <span>SPSC</span></h2>
+                <p>Our hallmark is Excellence driven by Passion!</p>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>The Sindh Public Service Commission (SPSC) is a constitutional body responsible for recruiting qualified professionals for the provincial civil services. Established under Article 242 of the Constitution of Pakistan, SPSC operates with a mission to select the best talent through a transparent and merit-based process.</p>
+                    <div class="about-features">
+                        <div class="feature"><i class="fas fa-check-circle"></i> Merit-Based Selection</div>
+                        <div class="feature"><i class="fas fa-check-circle"></i> Transparent Process</div>
+                        <div class="feature"><i class="fas fa-check-circle"></i> Equal Opportunity</div>
+                        <div class="feature"><i class="fas fa-check-circle"></i> Professional Excellence</div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <img src="/Capture.PNG" alt="SPSC Building" onerror="this.style.display='none'">
+                </div>
+            </div>
+            <div class="mission-vision">
+                <div class="mv-card">
+                    <i class="fas fa-bullseye"></i>
+                    <h3>Our Mission</h3>
+                    <p>To select competent, dedicated, and professional individuals for the civil service through a fair, transparent, and merit-based recruitment process.</p>
+                </div>
+                <div class="mv-card">
+                    <i class="fas fa-eye"></i>
+                    <h3>Our Vision</h3>
+                    <p>To be a model institution that sets the highest standards of governance, integrity, and efficiency in public service recruitment.</p>
+                </div>
+                <div class="mv-card">
+                    <i class="fas fa-handshake"></i>
+                    <h3>Our Values</h3>
+                    <p>Integrity, Transparency, Meritocracy, Equal Opportunity, Professionalism, and Continuous Improvement.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== RESULTS CAROUSEL ===== -->
+    <section class="results-preview" id="results">
+        <div class="container">
+            <div class="section-header">
+                <h2>Latest <span>Results</span></h2>
+                <p>Check recent examination results and merit lists</p>
+            </div>
+            <div class="results-grid" id="resultsGrid">
+                <!-- Dynamically loaded from API -->
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== JOBS SECTION ===== -->
+    <section class="jobs" id="jobs">
+        <div class="container">
+            <div class="section-header">
+                <h2>Current <span>Vacancies</span></h2>
+                <p>Explore career opportunities with Sindh Public Service Commission</p>
+            </div>
+            <div class="job-filters">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="open">Open</button>
+                <button class="filter-btn" data-filter="closed">Closed</button>
+                <input type="text" id="jobSearch" placeholder="Search jobs..." class="job-search">
+            </div>
+            <div class="jobs-grid" id="jobsGrid">
+                <!-- Dynamically loaded from API -->
+            </div>
+            <div class="jobs-loading" id="jobsLoading">
+                <div class="loader"></div>
+                <p>Loading vacancies...</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== APPLY SECTION ===== -->
+    <section class="apply" id="apply">
+        <div class="container">
+            <div class="section-header">
+                <h2>Apply <span>Online</span></h2>
+                <p>Submit your application for available positions</p>
+            </div>
+            <div class="apply-container">
+                <div class="apply-steps">
+                    <div class="step active" id="step1Indicator">
+                        <div class="step-num">1</div>
+                        <div class="step-info">
+                            <h4>Select Job</h4>
+                            <p>Choose a position</p>
+                        </div>
+                    </div>
+                    <div class="step" id="step2Indicator">
+                        <div class="step-num">2</div>
+                        <div class="step-info">
+                            <h4>Fill Details</h4>
+                            <p>Personal information</p>
+                        </div>
+                    </div>
+                    <div class="step" id="step3Indicator">
+                        <div class="step-num">3</div>
+                        <div class="step-info">
+                            <h4>Upload Docs</h4>
+                            <p>Attach documents</p>
+                        </div>
+                    </div>
+                    <div class="step" id="step4Indicator">
+                        <div class="step-num">4</div>
+                        <div class="step-info">
+                            <h4>Confirm</h4>
+                            <p>Review & submit</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="apply-form-container">
+                    <!-- Step 1: Select Job -->
+                    <div class="apply-step-content active" id="step1">
+                        <h3>Select a Position</h3>
+                        <p>Choose from the available vacancies below to start your application.</p>
+                        <div class="job-select-grid" id="jobSelectGrid">
+                            <!-- Dynamically loaded -->
+                        </div>
+                        <p id="applyLoginMsg" class="apply-msg">Please <a href="#" id="applyLoginBtn">login</a> to continue with your application.</p>
+                    </div>
+
+                    <!-- Step 2: Personal Details -->
+                    <div class="apply-step-content" id="step2">
+                        <h3>Personal Details</h3>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label>Full Name <span class="required">*</span></label>
+                                <input type="text" id="appName" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Father's Name <span class="required">*</span></label>
+                                <input type="text" id="appFather" required>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label>Date of Birth <span class="required">*</span></label>
+                                <input type="date" id="appDob" required>
+                            </div>
+                            <div class="form-group">
+                                <label>CNIC <span class="required">*</span></label>
+                                <input type="text" id="appCnic" placeholder="41301-1234567-1" required>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label>Phone Number <span class="required">*</span></label>
+                                <input type="tel" id="appPhone" placeholder="03XX-XXXXXXX" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Address</label>
+                                <textarea id="appAddress" rows="3"></textarea>
+                            </div>
+                        </div>
+                        <button class="btn-primary next-step" data-next="3">Next: Upload Documents</button>
+                    </div>
+
+                    <!-- Step 3: Upload Documents -->
+                    <div class="apply-step-content" id="step3">
+                        <h3>Upload Documents</h3>
+                        <div class="upload-group">
+                            <label>Passport Size Photo (max 500KB)</label>
+                            <div class="file-upload" id="photoUpload">
+                                <i class="fas fa-camera"></i>
+                                <p>Click to upload photo</p>
+                                <input type="file" id="appPhoto" accept="image/*" hidden>
+                            </div>
+                        </div>
+                        <div class="upload-group">
+                            <label>CV / Resume (PDF, max 2MB)</label>
+                            <div class="file-upload" id="cvUpload">
+                                <i class="fas fa-file-pdf"></i>
+                                <p>Click to upload CV</p>
+                                <input type="file" id="appCv" accept=".pdf,.doc,.docx" hidden>
+                            </div>
+                        </div>
+                        <div class="upload-group">
+                            <label>Educational Documents (PDF, max 10MB combined)</label>
+                            <div class="file-upload" id="docsUpload">
+                                <i class="fas fa-folder-open"></i>
+                                <p>Click to upload documents (multiple)</p>
+                                <input type="file" id="appDocs" accept=".pdf,.doc,.docx" multiple hidden>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label>Qualification</label>
+                                <select id="appQualification">
+                                    <option value="">Select...</option>
+                                    <option value="matric">Matriculation</option>
+                                    <option value="intermediate">Intermediate</option>
+                                    <option value="bachelors">Bachelors</option>
+                                    <option value="masters">Masters</option>
+                                    <option value="phd">PhD</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label>Years of Experience</label>
+                                <input type="number" id="appExperience" min="0" max="50">
+                            </div>
+                        </div>
+                        <button class="btn-secondary prev-step" data-prev="2">Previous</button>
+                        <button class="btn-primary next-step" data-next="4">Review & Submit</button>
+                    </div>
+
+                    <!-- Step 4: Review & Submit -->
+                    <div class="apply-step-content" id="step4">
+                        <h3>Review Your Application</h3>
+                        <div class="review-box" id="reviewBox">
+                            <p>Please complete the previous steps.</p>
+                        </div>
+                        <div class="form-group checkbox-group">
+                            <label><input type="checkbox" id="agreeTerms"> I confirm that all information provided is true and correct to the best of my knowledge.</label>
+                        </div>
+                        <button class="btn-secondary prev-step" data-prev="3">Previous</button>
+                        <button class="btn-primary" id="submitApplication"><i class="fas fa-paper-plane"></i> Submit Application</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== CONTACT SECTION ===== -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2>Contact <span>Us</span></h2>
+                <p>Get in touch with the Sindh Public Service Commission</p>
+            </div>
+            <div class="contact-container">
+                <div class="contact-info">
+                    <div class="contact-card">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <h4>Head Office</h4>
+                        <p>Thandi Sarak, Hyderabad, Sindh</p>
+                    </div>
+                    <div class="contact-card">
+                        <i class="fas fa-phone-alt"></i>
+                        <h4>Phone</h4>
+                        <p>022-9201234</p>
+                    </div>
+                    <div class="contact-card">
+                        <i class="fas fa-envelope"></i>
+                        <h4>Email</h4>
+                        <p>info@spsc.gov.pk</p>
+                    </div>
+                    <div class="contact-card">
+                        <i class="fas fa-clock"></i>
+                        <h4>Office Hours</h4>
+                        <p>Mon-Fri: 9:00 AM - 5:00 PM</p>
+                    </div>
+                    <div class="contact-card">
+                        <i class="fas fa-building"></i>
+                        <h4>Regional Office Karachi</h4>
+                        <p>2nd Floor, Sindh Secretariat Building No. 6, Karachi</p>
+                    </div>
+                    <div class="contact-card">
+                        <i class="fas fa-building"></i>
+                        <h4>Regional Office Sukkur</h4>
+                        <p>Bungalow No. B-156, Friends Cooperative Housing Society, Sukkur</p>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <h3>Send us a Message</h3>
+                    <form id="contactForm">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label>Your Name <span class="required">*</span></label>
+                                <input type="text" id="contactName" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Your Email <span class="required">*</span></label>
+                                <input type="email" id="contactEmail" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>Subject <span class="required">*</span></label>
+                            <input type="text" id="contactSubject" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Message <span class="required">*</span></label>
+                            <textarea id="contactMessage" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn-primary"><i class="fas fa-paper-plane"></i> Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== NEWSLETTER ===== -->
+    <section class="newsletter">
+        <div class="container">
+            <div class="newsletter-content">
+                <h2>Subscribe to Our Newsletter</h2>
+                <p>Stay updated with latest job announcements, results, and SPSC news.</p>
+                <form id="subscribeForm" class="newsletter-form">
+                    <input type="email" id="subscribeEmail" placeholder="Enter your email address" required>
+                    <button type="submit"><i class="fas fa-paper-plane"></i> Subscribe</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <img src="/logo-dark.png" alt="SPSC" class="footer-logo">
+                    <p>The Sindh Public Service Commission is committed to selecting the best talent through a transparent and merit-based recruitment process.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#jobs">Current Jobs</a></li>
+                        <li><a href="#results">Results</a></li>
+                        <li><a href="#">Gallery</a></li>
+                        <li><a href="#contact">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Other Links</h4>
+                    <ul>
+                        <li><a href="#">Government of Sindh</a></li>
+                        <li><a href="#">Federal Public Service Commission</a></li>
+                        <li><a href="#">Punjab Public Service Commission</a></li>
+                        <li><a href="#">Balochistan Public Service Commission</a></li>
+                        <li><a href="#">Khyber Pakhtunkhwa Public Service Commission</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Follow Us</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                    <div class="footer-app">
+                        <p>Download our mobile app:</p>
+                        <div class="app-badges">
+                            <a href="#"><i class="fab fa-google-play"></i> Google Play</a>
+                            <a href="#"><i class="fab fa-app-store"></i> App Store</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Sindh Public Service Commission. All Rights Reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms & Conditions</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ===== LOGIN MODAL ===== -->
+    <div class="modal" id="loginModal">
+        <div class="modal-content">
+            <span class="modal-close">&times;</span>
+            <div class="modal-tabs">
+                <button class="tab-btn active" data-tab="login">Login</button>
+                <button class="tab-btn" data-tab="register">Register</button>
+            </div>
+            <div class="tab-content active" id="loginTab">
+                <h3>Welcome Back</h3>
+                <p>Login with your CNIC to manage applications</p>
+                <form id="loginForm">
+                    <div class="form-group">
+                        <label><i class="fas fa-id-card"></i> CNIC Number</label>
+                        <input type="text" id="loginCnic" placeholder="41301-1234567-1" required>
+                    </div>
+                    <div class="form-group">
+                        <label><i class="fas fa-lock"></i> Password</label>
+                        <input type="password" id="loginPassword" placeholder="Enter your password" required>
+                    </div>
+                    <button type="submit" class="btn-primary btn-full"><i class="fas fa-sign-in-alt"></i> Login</button>
+                </form>
+            </div>
+            <div class="tab-content" id="registerTab">
+                <h3>Create Account</h3>
+                <p>Register to apply for positions online</p>
+                <form id="registerForm">
+                    <div class="form-group">
+                        <label>Full Name</label>
+                        <input type="text" id="regName" required>
+                    </div>
+                    <div class="form-group">
+                        <label>CNIC Number</label>
+                        <input type="text" id="regCnic" placeholder="41301-1234567-1" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Email</label>
+                        <input type="email" id="regEmail" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Password</label>
+                        <input type="password" id="regPassword" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Confirm Password</label>
+                        <input type="password" id="regConfirm" required>
+                    </div>
+                    <button type="submit" class="btn-primary btn-full"><i class="fas fa-user-plus"></i> Register</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== TOAST ===== -->
+    <div id="toast" class="toast"></div>
+
+    <!-- ===== AI CHATBOT ===== -->
+    <div class="chatbot-btn" id="chatbotBtn" title="SPSC AI Assistant">
+        <i class="fas fa-robot"></i>
+    </div>
+    <div class="chatbot-widget" id="chatbotWidget">
+        <div class="chatbot-header">
+            <div class="chatbot-header-info">
+                <i class="fas fa-robot"></i>
+                <div>
+                    <h4>SPSC AI Assistant</h4>
+                    <p>Ask me anything about SPSC</p>
+                </div>
+            </div>
+            <button id="chatbotClose"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="chatbot-messages" id="chatbotMessages">
+            <div class="chat-msg bot">
+                <div class="msg-content">
+                    <p>👋 Welcome to SPSC! I'm your AI assistant. I can help you with:</p>
+                    <ul>
+                        <li>Job vacancies and applications</li>
+                        <li>Eligibility criteria</li>
+                        <li>Recruitment process</li>
+                        <li>Results and schedules</li>
+                    </ul>
+                    <p>How can I help you today?</p>
+                </div>
+            </div>
+        </div>
+        <div class="chatbot-input">
+            <input type="text" id="chatbotInput" placeholder="Type your question..." autocomplete="off">
+            <button id="chatbotSend"><i class="fas fa-paper-plane"></i></button>
+        </div>
+        <div class="chatbot-typing" id="chatbotTyping" style="display:none;">
+            <span></span><span></span><span></span>
+        </div>
+    </div>
+
+    <script src="/js/main.js"></script>
+</body>
+</html>
